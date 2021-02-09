@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>330</width>
+    <height>830</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>330</width>
+    <height>830</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>10000000</width>
+    <height>1000000</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:lightblue</string>
+       </property>
+       <property name="text">
+        <string>TMO Summary</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="PyDMShellCommand" name="gdet_shell">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>GMD</string>
+         </property>
+         <property name="showIcon" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="commands" stdset="0">
+          <stringlist>
+           <string>bash /reg/g/pcds/epics/ioc/kfe/gmd/current/gmdScreens/launch_gmd_main_pcds.sh</string>
+          </stringlist>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="precision" stdset="0">
+          <number>3</number>
+         </property>
+         <property name="showUnits" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="precisionFromPV" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="alarmSensitiveBorder" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://EM1K0:GMD:HPS:AvgPulseIntensity</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="PyDMShellCommand" name="PyDMShellCommand_3">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>IM1K0</string>
+         </property>
+         <property name="showIcon" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="commands" stdset="0">
+          <stringlist>
+           <string>/reg/g/pcds/epics/ioc/common/pgpCamlink/R0.7.3/children/build/iocBoot/ioc-kfe-pgp01/edm-ioc-kfe-pgp01.cmd</string>
+          </stringlist>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_4">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="showUnits" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://IM1K0:XTES:CAM:ArrayRate_RBV</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="PyDMShellCommand" name="PyDMShellCommand_4">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>SL1K0</string>
+         </property>
+         <property name="showIcon" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="commands" stdset="0">
+          <stringlist>
+           <string>pydm mghaly/screens/devices/SL1K0-POWER.ui</string>
+          </stringlist>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="PyDMShellCommand" name="PyDMShellCommand">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>AT1K0</string>
+         </property>
+         <property name="showIcon" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="commands" stdset="0">
+          <stringlist>
+           <string>pydm /reg/g/pcds/epics-dev/mghaly/screens/vacuumscreens/AT1K0-GAS.ui</string>
+          </stringlist>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_2">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>2.2 ratio</string>
+         </property>
+         <property name="precision" stdset="0">
+          <number>1</number>
+         </property>
+         <property name="showUnits" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="precisionFromPV" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://EM1K0:GMD:HPS:AvgTransmission</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="PyDMShellCommand" name="PyDMShellCommand_2">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>XGMD</string>
+         </property>
+         <property name="showIcon" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="commands" stdset="0">
+          <stringlist>
+           <string>bash /reg/g/pcds/epics/ioc/kfe/gmd/current/gmdScreens/launch_xgmd_main_pcds.sh</string>
+          </stringlist>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_3">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="precision" stdset="0">
+          <number>3</number>
+         </property>
+         <property name="showUnits" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="precisionFromPV" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://EM2K0:XGMD:HPS:AvgPulseIntensity</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_6">
+       <item>
+        <widget class="PyDMShellCommand" name="PyDMShellCommand_5">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>PF1K0</string>
+         </property>
+         <property name="showIcon" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="commands" stdset="0">
+          <stringlist>
+           <string>typhos pf1k0</string>
+          </stringlist>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_5">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://PF1K0:WFS:MMS:STATE:GET_RBV</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_7">
+       <item>
+        <widget class="PyDMShellCommand" name="PyDMShellCommand_6">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>SL2K0</string>
+         </property>
+         <property name="showIcon" stdset="0">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_8">
+       <item>
+        <widget class="PyDMShellCommand" name="PyDMShellCommand_7">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>IM2K0</string>
+         </property>
+         <property name="showIcon" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="commands" stdset="0">
+          <stringlist>
+           <string>/reg/g/pcds/epics/ioc/common/pgpCamlink/R0.7.3/children/build/iocBoot/ioc-kfe-pgp02/edm-ioc-kfe-pgp02.cmd</string>
+          </stringlist>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_6">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="showUnits" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://IM2K0:XTES:CAM:ArrayRate_RBV</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_10">
+       <item>
+        <widget class="PyDMShellCommand" name="PyDMShellCommand_8">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>MR1K4 SOMS</string>
+         </property>
+         <property name="showIcon" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="commands" stdset="0">
+          <stringlist>
+           <string>typhos mr1k4_soms</string>
+          </stringlist>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_11">
+       <item>
+        <widget class="PyDMShellCommand" name="PyDMShellCommand_9">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>AT1K4</string>
+         </property>
+         <property name="showIcon" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="commands" stdset="0">
+          <stringlist>
+           <string>typhos at1k4</string>
+          </stringlist>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_7">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="showUnits" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://AT1K4:CALC:SYS:ActualTransmission_RBV</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_12">
+       <item>
+        <widget class="PyDMShellCommand" name="PyDMShellCommand_10">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>IM1K4</string>
+         </property>
+         <property name="showIcon" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="commands" stdset="0">
+          <stringlist>
+           <string>/reg/g/pcds/epics/ioc/common/pgpCamlink/R0.7.3/children/build/iocBoot/ioc-kfe-pgp03/edm-ioc-kfe-pgp03.cmd</string>
+          </stringlist>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_8">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="showUnits" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://IM1K4:XTES:CAM:ArrayRate_RBV</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_13">
+       <item>
+        <widget class="PyDMShellCommand" name="PyDMShellCommand_11">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>ST1K4</string>
+         </property>
+         <property name="showIcon" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="commands" stdset="0">
+          <stringlist>
+           <string>typhos st1k4</string>
+          </stringlist>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_9">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="showUnits" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="precisionFromPV" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://ST1K4:TEST:MMS:01.RBV</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_14">
+       <item>
+        <widget class="PyDMShellCommand" name="PyDMShellCommand_12">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>AL1K4</string>
+         </property>
+         <property name="showIcon" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="commands" stdset="0">
+          <stringlist>
+           <string>typhos al1k4</string>
+          </stringlist>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_10">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="alarmSensitiveContent" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://AL1K4:L2SI:MMS:STATE:GET_RBV</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_15">
+       <item>
+        <widget class="PyDMShellCommand" name="PyDMShellCommand_13">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>SL1K4</string>
+         </property>
+         <property name="showIcon" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="commands" stdset="0">
+          <stringlist>
+           <string>pydm /cds/group/pcds/epics-dev/mghaly/screens/devices/SL1K4-SCATTER.ui</string>
+          </stringlist>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_16">
+       <item>
+        <widget class="PyDMShellCommand" name="PyDMShellCommand_14">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>IM2K4</string>
+         </property>
+         <property name="showIcon" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="commands" stdset="0">
+          <stringlist>
+           <string>/reg/g/pcds/epics/ioc/kfe/gigECam/R1.0.0/build/iocBoot/ioc-im2k4-gige/edm-ioc-im2k4-gige.cmd</string>
+          </stringlist>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_11">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="showUnits" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://IM2K4:PPM:CAM:ArrayRate_RBV</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_17">
+       <item>
+        <widget class="PyDMShellCommand" name="PyDMShellCommand_15">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>SL2K4</string>
+         </property>
+         <property name="showIcon" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="commands" stdset="0">
+          <stringlist>
+           <string>pydm /cds/group/pcds/epics-dev/mghaly/screens/devices/SL2K4-SCATTER.ui</string>
+          </stringlist>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_19">
+       <item>
+        <widget class="PyDMShellCommand" name="PyDMShellCommand_17">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>MR2K4</string>
+         </property>
+         <property name="showIcon" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="commands" stdset="0">
+          <stringlist>
+           <string>typhos mr2k4_kbo</string>
+          </stringlist>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_18">
+       <item>
+        <widget class="PyDMShellCommand" name="PyDMShellCommand_16">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>IM3K4</string>
+         </property>
+         <property name="showIcon" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="commands" stdset="0">
+          <stringlist>
+           <string>/reg/g/pcds/epics/ioc/tmo/gigECam/R1.0.0/build/iocBoot/ioc-im3k4-gige/edm-ioc-im3k4-gige.cmd</string>
+          </stringlist>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_12">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="showUnits" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://IM3K4:PPM:CAM:ArrayRate_RBV</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_20">
+       <item>
+        <widget class="PyDMShellCommand" name="PyDMShellCommand_18">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>MR3K4</string>
+         </property>
+         <property name="showIcon" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="commands" stdset="0">
+          <stringlist>
+           <string>typhos mr3k4_kbo</string>
+          </stringlist>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_21">
+       <item>
+        <widget class="PyDMShellCommand" name="PyDMShellCommand_19">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>IM4K4</string>
+         </property>
+         <property name="showIcon" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="commands" stdset="0">
+          <stringlist>
+           <string>/reg/g/pcds/epics/ioc/tmo/gigECam/R1.0.0/build/iocBoot/ioc-im4k4-gige/edm-ioc-im4k4-gige.cmd</string>
+          </stringlist>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_13">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="showUnits" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://IM4K4:PPM:CAM:ArrayRate_RBV</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_22">
+       <item>
+        <widget class="PyDMShellCommand" name="PyDMShellCommand_20">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>LI1K4</string>
+         </property>
+         <property name="showIcon" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="commands" stdset="0">
+          <stringlist>
+           <string>typhos li1k4</string>
+          </stringlist>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_14">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="alarmSensitiveBorder" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://LI1K4:IP1:MMS:STATE:GET_RBV</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PyDMLabel</class>
+   <extends>QLabel</extends>
+   <header>pydm.widgets.label</header>
+  </customwidget>
+  <customwidget>
+   <class>PyDMShellCommand</class>
+   <extends>QPushButton</extends>
+   <header>pydm.widgets.shell_command</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

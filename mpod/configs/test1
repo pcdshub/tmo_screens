@@ -1,0 +1,82 @@
+parts:
+- base: TMO:PRO2:MPOD:01:M2:C2
+  name: ION SIG.
+  scale: false
+  vset: 450
+- base: TMO:PRO2:MPOD:01:M2:C3
+  name: ION REF.
+  scale: false
+  vset: 400
+- base: TMO:PRO2:MPOD:01:M2:C1
+  name: ION HOLDER
+  scale: false
+  vset: 300
+- base: TMO:PRO2:MPOD:01:M2:C0
+  name: ION MCP BACK
+  scale: false
+  vset: 5
+- base: TMO:PRO2:MPOD:01:M0:C7
+  name: ION MCP FRONT
+  scale: false
+  vset: -2300
+- base: TMO:PRO2:MPOD:01:M0:C6
+  name: ION TUBE
+  scale: true
+  vset: -4313
+- base: TMO:PRO2:MPOD:01:M0:C2
+  name: ION FL. 5
+  scale: true
+  vset: -3579
+- base: TMO:PRO2:MPOD:01:M0:C1
+  name: ION FL. 4
+  scale: true
+  vset: -2819
+- base: TMO:PRO2:MPOD:01:M0:C0
+  name: ION FL 3
+  scale: true
+  vset: -2110
+- base: TMO:PRO2:MPOD:01:M3:C1
+  name: ION FL 2
+  scale: true
+  vset: -1706
+- base: TMO:PRO2:MPOD:01:M3:C0
+  name: ION FL 1
+  scale: true
+  vset: -1090
+- base: TMO:PRO2:MPOD:01:M3:C2
+  name: HOLDING RODS
+  scale: true
+  vset: -1090
+- base: TMO:PRO2:MPOD:01:M3:C3
+  name: ELE FL 1
+  scale: true
+  vset: 23
+- base: TMO:PRO2:MPOD:01:M4:C0
+  name: ELE FL 2
+  scale: true
+  vset: 673
+- base: TMO:PRO2:MPOD:01:M7:C1
+  name: ELE FL 3
+  scale: true
+  vset: 1085
+- base: TMO:PRO2:MPOD:01:M7:C0
+  name: EL TUBE (2 meshes)
+  scale: true
+  vset: 1885
+- base: TMO:PRO2:MPOD:01:M2:C5
+  name: ELE MCP Front
+  scale: true
+  vset: 200
+- base: TMO:PRO2:MPOD:01:M5:C0
+  name: ELE MCP Back
+  scale: true
+  vset: 2200
+- base: TMO:PRO2:MPOD:01:M6:C3
+  name: Phosphor
+  scale: false
+  vset: 6000
+- base: TMO:PRO2:MPOD:01:M6:C0
+  name: Pho. Holder
+  scale: false
+  vset: 5000
+ramp_rate: 1.0

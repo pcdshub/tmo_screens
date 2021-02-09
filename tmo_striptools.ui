@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>683</width>
+    <height>117</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="1" column="4">
+      <widget class="PyDMShellCommand" name="PyDMShellCommand_6">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="text">
+        <string>Transmission</string>
+       </property>
+       <property name="showIcon" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="allowMultipleExecutions" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="titles" stdset="0">
+        <stringlist/>
+       </property>
+       <property name="commands" stdset="0">
+        <stringlist>
+         <string>StripTool /cds/home/opr/tmoopr/Striptool/transmission</string>
+        </stringlist>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="PyDMShellCommand" name="PyDMShellCommand">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="text">
+        <string>PPM</string>
+       </property>
+       <property name="showIcon" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="commands" stdset="0">
+        <stringlist>
+         <string>StripTool /cds/home/opr/tmoopr/Striptool/PPM</string>
+        </stringlist>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="PyDMShellCommand" name="PyDMShellCommand_3">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="text">
+        <string>GMD</string>
+       </property>
+       <property name="showIcon" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="commands" stdset="0">
+        <stringlist>
+         <string>StripTool /cds/home/opr/tmoopr/Striptool/GMD</string>
+        </stringlist>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="4">
+      <widget class="PyDMShellCommand" name="PyDMShellCommand_8">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="text">
+        <string>KBO Temps</string>
+       </property>
+       <property name="showIcon" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="commands" stdset="0">
+        <stringlist>
+         <string>StripTool /cds/home/opr/tmoopr/Striptool/KBO_temp</string>
+        </stringlist>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="PyDMShellCommand" name="PyDMShellCommand_5">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="text">
+        <string>KBO Vacuum</string>
+       </property>
+       <property name="showIcon" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="commands" stdset="0">
+        <stringlist>
+         <string>StripTool /cds/home/opr/tmoopr/Striptool/KBO_PRES</string>
+        </stringlist>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="PyDMShellCommand" name="PyDMShellCommand_7">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="text">
+        <string>LAMP KBO Vacuum</string>
+       </property>
+       <property name="showIcon" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="commands" stdset="0">
+        <stringlist>
+         <string>StripTool /cds/home/opr/tmoopr/Striptool/LAMP_KBO_PRES</string>
+        </stringlist>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="PyDMShellCommand" name="PyDMShellCommand_2">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="accessibleName">
+        <string/>
+       </property>
+       <property name="text">
+        <string>Fee Vacuum</string>
+       </property>
+       <property name="showIcon" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="commands" stdset="0">
+        <stringlist>
+         <string>StripTool /cds/home/opr/tmoopr/Striptool/FEE</string>
+        </stringlist>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="PyDMShellCommand" name="PyDMShellCommand_4">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="text">
+        <string>TMO Vacuum</string>
+       </property>
+       <property name="showIcon" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="commands" stdset="0">
+        <stringlist>
+         <string>StripTool /cds/home/opr/tmoopr/Striptool/TMO_VAC</string>
+        </stringlist>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="PyDMShellCommand" name="PyDMShellCommand_9">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="text">
+        <string>Catcher</string>
+       </property>
+       <property name="showIcon" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="commands" stdset="0">
+        <stringlist>
+         <string>StripTool /cds/home/opr/tmoopr/Striptool/catcher</string>
+        </stringlist>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PyDMShellCommand</class>
+   <extends>QPushButton</extends>
+   <header>pydm.widgets.shell_command</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
