@@ -1,0 +1,64 @@
+IM4K4:PPM:CAM:ArrayRate_RBV:
+  name: im4k4_label
+  val: 1.0
+  oper: less
+EM1K0:GMD:HPS:AvgPulseIntensity:
+  name: gmd_label
+  val: 0.01
+  oper: less
+IM1K0:XTES:CAM:ArrayRate_RBV:
+  name: im1k0_label
+  val: 1.0
+  oper: less
+EM1K0:GMD:HPS:AvgTransmission:
+  name: at1k0_label
+  val: 0.1
+  oper: less
+EM2K0:XGMD:HPS:AvgPulseIntensity:
+  name: xgmd_label
+  val: 0.01
+  oper: less
+PF1K0:WFS:MMS:STATE:GET_RBV:
+  name: pf1k0_label
+  val: 1
+  oper: equal
+IM2K0:XTES:CAM:ArrayRate_RBV:
+  name: im2k0_label
+  val: 1.0
+  oper: less
+AT1K4:CALC:SYS:ActualTransmission_RBV:
+  name: at1k4_label
+  val: 1.0
+  oper: less
+IM1K4:XTES:CAM:ArrayRate_RBV:
+  name: im1k4_label
+  val: 1.0
+  oper: less
+ST1K4:TEST:MMS:01.RBV:
+  name: st1k4_label
+  val: 0.1
+  oper: greater
+AL1K4:L2SI:MMS:STATE:GET_RBV:
+  name: al1k4_label
+  val: 1
+  oper: equal
+IM2K4:PPM:CAM:ArrayRate_RBV:
+  name: im2k4_label
+  val: 1.0
+  oper: less
+IM3K4:PPM:CAM:ArrayRate_RBV:
+  name: im3k4_label
+  val: 1.0
+  oper: less
+IM4K4:PPM:CAM:ArrayRate_RBV:
+  name: im4k4_label
+  val: 1.0
+  oper: less
+LI1K4:IP1:MMS:STATE:GET_RBV:
+  name: li1k4_label
+  val: 1
+  oper: equal
+ST4K4:TMO_TERM:nPositionState_RBV:
+  name: st4k4_label
+  val: 0
+  oper: equal

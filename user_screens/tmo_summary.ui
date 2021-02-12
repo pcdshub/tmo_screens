@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>330</width>
-    <height>830</height>
+    <width>332</width>
+    <height>919</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -78,7 +78,7 @@
         </widget>
        </item>
        <item>
-        <widget class="PyDMLabel" name="PyDMLabel">
+        <widget class="PyDMLabel" name="gmd_label">
          <property name="toolTip">
           <string/>
          </property>
@@ -90,6 +90,9 @@
          </property>
          <property name="precisionFromPV" stdset="0">
           <bool>false</bool>
+         </property>
+         <property name="alarmSensitiveContent" stdset="0">
+          <bool>true</bool>
          </property>
          <property name="alarmSensitiveBorder" stdset="0">
           <bool>true</bool>
@@ -122,7 +125,7 @@
         </widget>
        </item>
        <item>
-        <widget class="PyDMLabel" name="PyDMLabel_4">
+        <widget class="PyDMLabel" name="im1k0_label">
          <property name="toolTip">
           <string/>
          </property>
@@ -179,12 +182,12 @@
         </widget>
        </item>
        <item>
-        <widget class="PyDMLabel" name="PyDMLabel_2">
+        <widget class="PyDMLabel" name="at1k0_label">
          <property name="toolTip">
           <string/>
          </property>
          <property name="text">
-          <string>2.2 ratio</string>
+          <string>82.1 ratio</string>
          </property>
          <property name="precision" stdset="0">
           <number>1</number>
@@ -223,7 +226,7 @@
         </widget>
        </item>
        <item>
-        <widget class="PyDMLabel" name="PyDMLabel_3">
+        <widget class="PyDMLabel" name="xgmd_label">
          <property name="toolTip">
           <string/>
          </property>
@@ -264,7 +267,7 @@
         </widget>
        </item>
        <item>
-        <widget class="PyDMLabel" name="PyDMLabel_5">
+        <widget class="PyDMLabel" name="pf1k0_label">
          <property name="toolTip">
           <string/>
          </property>
@@ -313,7 +316,7 @@
         </widget>
        </item>
        <item>
-        <widget class="PyDMLabel" name="PyDMLabel_6">
+        <widget class="PyDMLabel" name="im2k0_label">
          <property name="toolTip">
           <string/>
          </property>
@@ -370,7 +373,7 @@
         </widget>
        </item>
        <item>
-        <widget class="PyDMLabel" name="PyDMLabel_7">
+        <widget class="PyDMLabel" name="at1k4_label">
          <property name="toolTip">
           <string/>
          </property>
@@ -405,7 +408,7 @@
         </widget>
        </item>
        <item>
-        <widget class="PyDMLabel" name="PyDMLabel_8">
+        <widget class="PyDMLabel" name="im1k4_label">
          <property name="toolTip">
           <string/>
          </property>
@@ -440,7 +443,7 @@
         </widget>
        </item>
        <item>
-        <widget class="PyDMLabel" name="PyDMLabel_9">
+        <widget class="PyDMLabel" name="st1k4_label">
          <property name="toolTip">
           <string/>
          </property>
@@ -478,7 +481,7 @@
         </widget>
        </item>
        <item>
-        <widget class="PyDMLabel" name="PyDMLabel_10">
+        <widget class="PyDMLabel" name="al1k4_label">
          <property name="toolTip">
           <string/>
          </property>
@@ -535,7 +538,7 @@
         </widget>
        </item>
        <item>
-        <widget class="PyDMLabel" name="PyDMLabel_11">
+        <widget class="PyDMLabel" name="im2k4_label">
          <property name="toolTip">
           <string/>
          </property>
@@ -614,7 +617,7 @@
         </widget>
        </item>
        <item>
-        <widget class="PyDMLabel" name="PyDMLabel_12">
+        <widget class="PyDMLabel" name="im3k4_label">
          <property name="toolTip">
           <string/>
          </property>
@@ -671,7 +674,7 @@
         </widget>
        </item>
        <item>
-        <widget class="PyDMLabel" name="PyDMLabel_13">
+        <widget class="PyDMLabel" name="im4k4_label">
          <property name="toolTip">
           <string/>
          </property>
@@ -706,7 +709,7 @@
         </widget>
        </item>
        <item>
-        <widget class="PyDMLabel" name="PyDMLabel_14">
+        <widget class="PyDMLabel" name="li1k4_label">
          <property name="toolTip">
           <string/>
          </property>
@@ -715,6 +718,38 @@
          </property>
          <property name="channel" stdset="0">
           <string>ca://LI1K4:IP1:MMS:STATE:GET_RBV</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_23">
+       <item>
+        <widget class="PyDMShellCommand" name="PyDMShellCommand_21">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>ST4K4</string>
+         </property>
+         <property name="showIcon" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="commands" stdset="0">
+          <stringlist>
+           <string>pydm /cds/group/pcds/epics-dev/aegger/screens/tmo/st4k4_temp.ui</string>
+          </stringlist>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMLabel" name="st4k4_label">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://ST4K4:TMO_TERM:nPositionState_RBV</string>
          </property>
         </widget>
        </item>
