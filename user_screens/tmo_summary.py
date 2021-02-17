@@ -7,6 +7,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from pydm.widgets import PyDMLabel
 import logging
 import numpy as np
+from threading import Lock, get_ident
 
 BASE = '/cds/group/pcds/epics-dev/aegger/tmo_screens/user_screens/'
 UI_FILE = 'tmo_summary.ui'
@@ -16,9 +17,12 @@ ALARM_FILE = 'alarm_list.yml'
 logger = logging.getLogger(__name__)
 
 class TMOSummary(Display):
+    _cb_lock = Lock()
+    _signal = QtCore.pyqtSignal(str)
     def __init__(self, parent=None, args=None, macros=None, alarms_file=ALARM_FILE):
         super(TMOSummary, self).__init__(parent=parent, args=args, macros=macros)
         self._alarm_config = self.load_alarms(f'{BASE}{alarms_file}')
+        self._signal.connect(self.change_color)
 
     def ui_filename(self):
         """Boiler plate pydm"""
@@ -42,26 +46,33 @@ class TMOSummary(Display):
         except Exception as e:
             logger.warning(f'Unable to load alarm config: {e}')
 
+    def change_color(self, name):
+        """Call a change to style sheet from main thread"""
+        with self._cb_lock:
+            style_sheet = getattr(self.ui, name).styleSheet()
+            if style_sheet != 'color: red':
+                getattr(self.ui, name).setStyleSheet('color: red')
+            elif style_sheet != '':
+                getattr(self.ui, name).setStyleSheet('')
+
     def compare_clbk(self, *args, **kwargs):
         pv = getattr(kwargs['obj'], 'name')
         cur_val = getattr(kwargs['obj'], 'value')
-        
+
         if pv in self._alarm_config.keys():
             oper = self._alarm_config[pv]['oper']
             val = self._alarm_config[pv]['val']
             name = self._alarm_config[pv]['name']
             style_sheet = getattr(self.ui, name).styleSheet() 
             
+            # Go through comparison cases, if we hit an alarm
+            # send to main thread to check if we should change style sheet
+            # Also, if we don't hit an alarm, but are red, we'll change it back
             if oper == 'less' and cur_val < val:
-                if style_sheet != 'color: red':
-                    getattr(self.ui, name).setStyleSheet('color: red')
+                self._signal.emit(name)
             elif oper == 'more' and cur_val > val:
-                if style_sheet != 'color: red':
-                    getattr(self.ui, name).setStyleSheet('color: red')
+                self._signal.emit(name)
             elif oper == 'equal' and cur_val != val:
-                if style_sheet != 'color: red':
-                    getattr(self.ui, name).setStyleSheet('color: red')
-            elif style_sheet == 'color: red':
-                if style_sheet != '':
-                    getattr(self.ui, name).setStyleSheet('color: red')
-
+                self._signal.emit(name)
+            elif style_sheet == 'color: red': 
+                self._signal.emit(name)

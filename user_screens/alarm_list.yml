@@ -62,3 +62,8 @@ ST4K4:TMO_TERM:nPositionState_RBV:
   name: st4k4_label
   val: 0
   oper: equal
+IM5K4:PPM:CAM:ArrayRate_RBV:
+  name: im5k4_label
+  val: 1.0
+  oper: less
+

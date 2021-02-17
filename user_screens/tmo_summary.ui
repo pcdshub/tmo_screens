@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>332</width>
-    <height>919</height>
+    <width>330</width>
+    <height>830</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -750,6 +750,38 @@
          </property>
          <property name="channel" stdset="0">
           <string>ca://ST4K4:TMO_TERM:nPositionState_RBV</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_24">
+       <item>
+        <widget class="PyDMShellCommand" name="im5k4_shell">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>IM5K4</string>
+         </property>
+         <property name="showIcon" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="commands" stdset="0">
+          <stringlist>
+           <string>/reg/neh/home4/zlentz/github/lcls2-fee-cams/build/iocBoot/ioc-im5k4-gige/edm-ioc-im5k4-gige.cmd</string>
+          </stringlist>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMLabel" name="im5k4_label">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://IM5K4:PPM:CAM:ArrayRate_RBV</string>
          </property>
         </widget>
        </item>
