@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 
 class TMOSummary(Display):
     _cb_lock = Lock()
-    _signal = QtCore.pyqtSignal(str)
+    _signal = QtCore.pyqtSignal(str, bool)
     def __init__(self, parent=None, args=None, macros=None, alarms_file=ALARM_FILE):
         super(TMOSummary, self).__init__(parent=parent, args=args, macros=macros)
         self._alarm_config = self.load_alarms(f'{BASE}{alarms_file}')
@@ -46,13 +46,13 @@ class TMOSummary(Display):
         except Exception as e:
             logger.warning(f'Unable to load alarm config: {e}')
 
-    def change_color(self, name):
+    def change_color(self, name, alarm):
         """Call a change to style sheet from main thread"""
         with self._cb_lock:
             style_sheet = getattr(self.ui, name).styleSheet()
-            if style_sheet != 'color: red':
+            if alarm and style_sheet == '':
                 getattr(self.ui, name).setStyleSheet('color: red')
-            elif style_sheet != '':
+            elif not alarm and style_sheet == 'color: red':
                 getattr(self.ui, name).setStyleSheet('')
 
     def compare_clbk(self, *args, **kwargs):
@@ -68,10 +68,10 @@ class TMOSummary(Display):
             # send to main thread to check if we should change style sheet
             # Also, if we don't hit an alarm, but are red, we'll change it back
             if oper == 'less' and cur_val < val:
-                self._signal.emit(name)
+                self._signal.emit(name, True)
             elif oper == 'more' and cur_val > val:
-                self._signal.emit(name)
+                self._signal.emit(name, True)
             elif oper == 'equal' and cur_val != val:
-                self._signal.emit(name)
-            elif style_sheet == 'color: red': 
-                self._signal.emit(name)
+                self._signal.emit(name, True)
+            else: 
+                self._signal.emit(name, False)
