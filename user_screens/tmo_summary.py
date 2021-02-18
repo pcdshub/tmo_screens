@@ -63,7 +63,6 @@ class TMOSummary(Display):
             oper = self._alarm_config[pv]['oper']
             val = self._alarm_config[pv]['val']
             name = self._alarm_config[pv]['name']
-            style_sheet = getattr(self.ui, name).styleSheet() 
             
             # Go through comparison cases, if we hit an alarm
             # send to main thread to check if we should change style sheet
