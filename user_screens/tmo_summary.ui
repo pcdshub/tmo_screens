@@ -58,6 +58,63 @@
       </widget>
      </item>
      <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_9">
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>eBeam Energy</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_2">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="precision" stdset="0">
+          <number>3</number>
+         </property>
+         <property name="showUnits" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="precisionFromPV" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://BEND:DMPS:420:BDES</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_25">
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_3">
+         <property name="toolTip">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_4">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="showUnits" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://SIOC:SYS0:ML00:AO628</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
         <widget class="PyDMShellCommand" name="gdet_shell">
@@ -187,7 +244,7 @@
           <string/>
          </property>
          <property name="text">
-          <string>82.1 ratio</string>
+          <string>-331.4 ratio</string>
          </property>
          <property name="precision" stdset="0">
           <number>1</number>

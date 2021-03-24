@@ -51,8 +51,8 @@ class TMOSummary(Display):
         with self._cb_lock:
             style_sheet = getattr(self.ui, name).styleSheet()
             if alarm and style_sheet == '':
-                getattr(self.ui, name).setStyleSheet('color: red')
-            elif not alarm and style_sheet == 'color: red':
+                getattr(self.ui, name).setStyleSheet('border: 1px solid red')
+            elif not alarm and style_sheet == 'border: 1px solid red':
                 getattr(self.ui, name).setStyleSheet('')
 
     def compare_clbk(self, *args, **kwargs):
