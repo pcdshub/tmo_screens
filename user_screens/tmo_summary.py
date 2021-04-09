@@ -50,10 +50,15 @@ class TMOSummary(Display):
         """Call a change to style sheet from main thread"""
         with self._cb_lock:
             style_sheet = getattr(self.ui, name).styleSheet()
-            if alarm and style_sheet == '':
-                getattr(self.ui, name).setStyleSheet('color: red')
-            elif not alarm and style_sheet == 'color: red':
-                getattr(self.ui, name).setStyleSheet('')
+            if style_sheet == '':
+                if alarm:
+                    getattr(self.ui, name).setStyleSheet('border: 2px solid red')
+                else:
+                    getattr(self.ui, name).setStyleSheet('border: 2px solid green')
+            if alarm and style_sheet == 'border: 2px solid green':
+                getattr(self.ui, name).setStyleSheet('border: 2px solid red')
+            elif not alarm and style_sheet == 'border: 2px solid red':
+                getattr(self.ui, name).setStyleSheet('border: 2px solid green')
 
     def compare_clbk(self, *args, **kwargs):
         pv = getattr(kwargs['obj'], 'name')

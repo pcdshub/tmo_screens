@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>330</width>
-    <height>830</height>
+    <width>369</width>
+    <height>1296</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -56,6 +56,132 @@
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_9">
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>eBeam Energy</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_2">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="precision" stdset="0">
+          <number>3</number>
+         </property>
+         <property name="showUnits" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="precisionFromPV" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://BEND:DMPS:420:BDES</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_25">
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_3">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>Photon Energy</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_4">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="showUnits" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://SIOC:SYS0:ML00:AO628</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_26">
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_5">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>ST3K4</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_6">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://PPS:NEH1:1:ST3K4INSUM</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_27">
+       <item>
+        <widget class="PyDMShellCommand" name="PyDMShellCommand_22">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>RTDSK0</string>
+         </property>
+         <property name="showIcon" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="commands" stdset="0">
+          <stringlist>
+           <string>pydm /reg/g/pcds/epics-dev/jyin/screens/RTDSK0.ui</string>
+          </stringlist>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_23">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://RTDSK0:MPA:01:POS_STATE_RBV</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_7">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://RTDSK0:MPA:02:POS_STATE_RBV</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
@@ -140,6 +266,39 @@
       </layout>
      </item>
      <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_28">
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_8">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>IM1K0 Press</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_9">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>1.12e-09 TORR</string>
+         </property>
+         <property name="showUnits" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://IM1K0:XTES:GCC:1:PRESS_RBV</string>
+         </property>
+         <property name="displayFormat" stdset="0">
+          <enum>PyDMLabel::Exponential</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
       <layout class="QHBoxLayout" name="horizontalLayout_5">
        <item>
         <widget class="PyDMShellCommand" name="PyDMShellCommand_4">
@@ -156,6 +315,44 @@
           <stringlist>
            <string>pydm mghaly/screens/devices/SL1K0-POWER.ui</string>
           </stringlist>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_10">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="precision" stdset="0">
+          <number>1</number>
+         </property>
+         <property name="showUnits" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="precisionFromPV" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://SL1K0:POWER:ACTUAL_XWIDTH_RBV</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_11">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="precision" stdset="0">
+          <number>1</number>
+         </property>
+         <property name="showUnits" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="precisionFromPV" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://SL1K0:POWER:ACTUAL_YWIDTH_RBV</string>
          </property>
         </widget>
        </item>
@@ -187,7 +384,7 @@
           <string/>
          </property>
          <property name="text">
-          <string>82.1 ratio</string>
+          <string>2181.4 ratio</string>
          </property>
          <property name="precision" stdset="0">
           <number>1</number>
@@ -291,6 +488,49 @@
          <property name="showIcon" stdset="0">
           <bool>false</bool>
          </property>
+         <property name="commands" stdset="0">
+          <stringlist>
+           <string>pydm mghaly/screens/devices/SL2K0-POWER.ui</string>
+          </stringlist>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_12">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="precision" stdset="0">
+          <number>1</number>
+         </property>
+         <property name="showUnits" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="precisionFromPV" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://SL2K0:POWER:ACTUAL_XWIDTH_RBV</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_13">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="precision" stdset="0">
+          <number>1</number>
+         </property>
+         <property name="showUnits" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="precisionFromPV" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://SL2K0:POWER:ACTUAL_YWIDTH_RBV</string>
+         </property>
         </widget>
        </item>
       </layout>
@@ -331,6 +571,36 @@
       </layout>
      </item>
      <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_29">
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_14">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>IM2K0 Press</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_15">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="showUnits" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://TV2K0:GCC:1:PRESS_RBV</string>
+         </property>
+         <property name="displayFormat" stdset="0">
+          <enum>PyDMLabel::Exponential</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
       <layout class="QHBoxLayout" name="horizontalLayout_10">
        <item>
         <widget class="PyDMShellCommand" name="PyDMShellCommand_8">
@@ -347,6 +617,25 @@
           <stringlist>
            <string>typhos mr1k4_soms</string>
           </stringlist>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_16">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="precision" stdset="0">
+          <number>1</number>
+         </property>
+         <property name="showUnits" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="precisionFromPV" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://MR1K4:SOMS:MMS:PITCH.RBV</string>
          </property>
         </widget>
        </item>
@@ -515,6 +804,44 @@
          </property>
         </widget>
        </item>
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_17">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="precision" stdset="0">
+          <number>1</number>
+         </property>
+         <property name="showUnits" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="precisionFromPV" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://SL1K4:SCATTER:ACTUAL_XWIDTH_RBV</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_18">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="precision" stdset="0">
+          <number>1</number>
+         </property>
+         <property name="showUnits" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="precisionFromPV" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://SL1K4:SCATTER:ACTUAL_YWIDTH_RBV</string>
+         </property>
+        </widget>
+       </item>
       </layout>
      </item>
      <item>
@@ -572,6 +899,44 @@
          </property>
         </widget>
        </item>
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_19">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="precision" stdset="0">
+          <number>1</number>
+         </property>
+         <property name="showUnits" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="precisionFromPV" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://SL2K4:SCATTER:ACTUAL_XWIDTH_RBV</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_20">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="precision" stdset="0">
+          <number>1</number>
+         </property>
+         <property name="showUnits" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="precisionFromPV" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://SL2K4:SCATTER:ACTUAL_YWIDTH_RBV</string>
+         </property>
+        </widget>
+       </item>
       </layout>
      </item>
      <item>
@@ -591,6 +956,25 @@
           <stringlist>
            <string>typhos mr2k4_kbo</string>
           </stringlist>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_21">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="precision" stdset="0">
+          <number>1</number>
+         </property>
+         <property name="showUnits" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="precisionFromPV" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://MR2K4:KBO:MMS:PITCH.RBV</string>
          </property>
         </widget>
        </item>
@@ -648,6 +1032,25 @@
           <stringlist>
            <string>typhos mr3k4_kbo</string>
           </stringlist>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMLabel" name="PyDMLabel_22">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="precision" stdset="0">
+          <number>1</number>
+         </property>
+         <property name="showUnits" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="precisionFromPV" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ca://MR3K4:KBO:MMS:PITCH.RBV</string>
          </property>
         </widget>
        </item>
